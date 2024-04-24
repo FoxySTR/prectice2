@@ -1,0 +1,198 @@
+/* Инпуты в форме поиска */
+body{
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+input{
+    margin-bottom: 20px; 
+}
+.number-fond{
+    display: inline-block;
+
+}
+#number-fond{
+    width: 75px;
+}
+.number-opis{
+    display: inline-block;
+}
+#number-opis{
+    width: 75px;
+}
+.number-dela{
+    display: inline-block;
+}
+#number-dela{
+    width: 75px;
+}
+.number-delaS{
+    display: inline-block;
+}
+#number-delaS{
+    width: 75px;
+}
+.last-name{
+    display: block;
+    
+}
+#last-name{
+    width: 275px;
+}
+.first-name{
+    display: block;
+}
+#first-name{
+    width: 275px;
+}
+.midle-name{
+    display: block;
+}
+#midle-name{
+    width: 275px;
+}
+.date-of-birthday{
+    display: inline-block;
+}
+#date-of-birthday{
+    width: 75px;
+}
+.month-of-birthday{
+    display: inline-block;
+}
+#month-of-birthday{
+    width: 75px;
+}
+.year-of-birthday{
+    display: inline-block;
+}
+#year-of-birthday{
+    width: 75px;
+}
+.place-of-birthday{
+    display: block;
+}
+#place-of-birthday{
+    width: 550px;
+}
+.number-of-sheets{
+    display: inline-block;
+}
+#number-of-sheets{
+    width: 75px;
+}
+.employee-category{
+    display: inline-block;
+}
+#employee-category{
+    width: 75px;
+}
+.note{
+    display: block;
+    margin-bottom: 10px;
+
+}
+#note{
+    resize: horizontal;
+    min-width: 400px;
+    max-width: 2000px;
+}
+
+
+
+/* Инпуты в форме добавления */
+.number-fondR{
+    display: inline-block;
+
+}
+#number-fondR{
+    width: 75px;
+}
+.number-opisR{
+    display: inline-block;
+}
+#number-opisR{
+    width: 75px;
+}
+.number-delaR{
+    display: inline-block;
+}
+#number-delaR{
+    width: 75px;
+}
+.number-delaSR{
+    display: inline-block;
+}
+#number-delaSR{
+    width: 75px;
+}
+.last-nameR{
+    display: block;
+    
+}
+#last-nameR{
+    width: 275px;
+}
+.first-nameR{
+    display: block;
+}
+#first-nameR{
+    width: 275px;
+}
+.midle-nameR{
+    display: block;
+}
+#midle-nameR{
+    width: 275px;
+}
+.date-of-birthdayR{
+    display: inline-block;
+}
+#date-of-birthdayR{
+    width: 75px;
+}
+.month-of-birthdayR{
+    display: inline-block;
+}
+#month-of-birthdayR{
+    width: 75px;
+}
+.year-of-birthdayR{
+    display: inline-block;
+}
+#year-of-birthdayR{
+    width: 75px;
+}
+.place-of-birthdayR{
+    display: block;
+}
+#place-of-birthdayR{
+    width: 550px;
+}
+.number-of-sheetsR{
+    display: inline-block;
+}
+#number-of-sheetsR{
+    width: 75px;
+}
+.employee-categoryR{
+    display: inline-block;
+}
+#employee-categoryR{
+    width: 75px;
+}
+.noteR{
+    display: block;
+    margin-bottom: 10px;
+
+}
+#noteR{
+    resize: horizontal;
+    min-width: 400px;
+    max-width: 2000px;
+}
+
+
+
+
+

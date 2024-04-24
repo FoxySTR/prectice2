@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* 
+        Нажмите сочетание клавишь ctrl+f и в поиск введите "ID(Номер указанный ниже)"
+
+        1. Основной грид ( ID1 )
+        2. Всплывающее окно с данными карточки ( ID2 )
+        3. Всплывающее окно добавления карточки ( ID3 )
+        4. Крест для закрытия карточек ( ID4 )
+        5. Форма поиска ( ID5 )
+        6. Панель навигации ( ID6 )
+        7. стиль самих карточек ( ID7 )
+*/
+
+/* ID1 - Основной грид*/
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px;
+    grid-gap: 10px;
+  }
+  
+  .box1 {
+    display: flex;
+    background: linear-gradient(#015b9e, #2578b7);
+    grid-column: 1 / 5;
+    grid-row: 1;
+    height: 80px;
+
+  }
+  
+  .box2 {
+    grid-column: 1 / 5;
+    grid-row: 2;
+  }
+  
+  .box3 {
+    display: inline-block;
+    grid-row: auto;
+    grid-row-start: 58;
+    grid-column: 1 / 5;
+  }
+
+  .box4{
+    grid-column: 1 / 5;
+    grid-row: 1 / 4;
+}
+
+
+/* ID2 - Всплывающее окно с данными*/
+.wrapper2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  grid-gap: 10px;
+}
+
+.box11 {
+  border: 3px solid #2578b7;
+  border-radius: 5px;
+  grid-column: 1;
+  grid-row: 1 / 5;
+}
+.box22 {
+  grid-column: 2 / 5;
+  width: 1050px;
+  text-align: left;
+}
+.person-image{
+  height: 350px;
+  width: 400px;
+}
+.FIOH{
+text-align: center;
+}
+.b22P{
+  text-align: left;
+}
+
+#persona {
+  display: none;
+  min-height: auto;
+  min-width: auto;
+  color: black;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+#okno {
+  min-height: auto;
+  min-width: auto;
+  width: 1500px;
+  height: 700px;
+  text-align: center;
+  padding: 10px;
+
+  border: 3px solid #2578b7;
+  border-radius: 10px;
+  background-color: white;
+  position: absolute;
+
+  box-shadow: 1px 1px 500px 1px #888888;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+#persona:target {display: contents;}
+
+/* ID3 - Всплывающее окно добавления*/
+
+
+#noteR{
+  resize: vertical;
+}
+textarea{
+  width: 850px;
+  height: 100px;
+  font-size: 14px;
+  border: 2px solid #E9F2FF;
+  border-radius: 5px;
+}
+textarea:focus{
+  display: inline-block;
+  outline: none;
+  border: 2px solid #C1D9FD;
+
+}
+
+
+.Button-add{
+
+  height: 35px;
+  width: 50%;
+
+  background: #2578b7;
+  border: 1px solid #2578b7;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+.Button-add:hover{
+  background:#015b9e
+}
+.zvezda{
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #ff0000;
+}
+
+
+/* ID4 - крест закрытия окна */
+.popup-close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.popup-close:hover {
+  opacity: 1;
+}
+.popup-close:before, .popup-close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #ff0000;
+}
+.popup-close:before {
+  transform: rotate(45deg);
+}
+.popup-close:after {
+  transform: rotate(-45deg);
+}
+.deleate{
+  position: absolute;
+  height: 20px;
+  width: 30px;
+  border: 1px solid #2578b7;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0);
+  margin-left: 270px;
+  cursor: pointer;
+}
+.deleate:hover{
+  transition: ease-in-out 2s;
+  background: red;
+  color: #fff;
+}
+.redact{
+  position: absolute;
+  height: 20px;
+  width: 30px;
+  border: 1px solid #2578b7;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0);
+  margin-right: 270px;
+  cursor: pointer;
+}
+.redact:hover{
+  transition: ease-in-out 2s;
+  background: #015b9e;
+  color: #fff;
+}
+
+
+
+
+
+/* ID5 - Форма поиска*/
+input{
+    width: 250px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 16px;
+    border: 2px solid #E9F2FF;
+    border-radius: 5px;
+    margin-left: 10px;
+} 
+input:focus{
+    display: inline-block;
+    outline: none;
+    border: 2px solid #C1D9FD;
+    transition: all 0.7s;
+}
+.cont-form{
+    
+    background: #FFFFFF;
+    box-shadow: 0px 6px 50px rgb(217, 229, 225);
+    border-radius: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+.form-title{
+    color: black;
+    font-weight: 500;
+    font-size: 24;
+    line-height: 23px;
+    margin-bottom: 38px;
+    text-align: center;
+    text-shadow: 1px 1px gray;
+    font-family: "PT Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.Button{
+    display: block;
+    height: 35px;
+    width: 100%;
+    background: #2578b7;
+    border: 1px solid #2578b7;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 25px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+.Button:hover{
+    background:#015b9e
+}
+
+
+/* ID6 - Панель навигации */
+.navbar{
+  display: flex;
+}
+.navbar .container{
+  height: inherit;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar-menu{
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-left: 70vh;
+  
+}
+.navbar-menu li{
+  display: flex;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  border: 3px solid #ffff;
+  border-radius: 4px;
+  border-left: #00000000;
+  border-top: #00000000;
+  border-right: #00000000;
+}
+.navbar-menu li a{
+
+
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+  font-size: 18px;
+
+
+
+}
+.navbar-menu li a:hover{
+  opacity: 1;
+}
+.navbar-wrap{
+  display: flex;
+  flex-flow: row nowrap;
+}
+.navbar-brand
+{
+  font-weight: 700;
+  font-size: 26px;
+  text-decoration: none;
+  color: #000;
+}
+.LogoText{
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+
+  padding-left: 10px;
+  
+
+}
+.logoimg{
+  width: 110px;
+  
+}
+
+/* ID7 - стиль самих карточек */
+.ogrmaxw{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 5.5%;
+}
+.product{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 2px solid #2578b7;
+  border-radius: 3px;
+  padding: 10px;
+  height: 25vh;
+  width: 32vh;
+  max-width: auto;
+}
+p{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  
+  margin: 10px;
+
+  font-family: "PT Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+}
+.product__title{
+  font-family: "PT Sans", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  margin-top: 20px;
+}

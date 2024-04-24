@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/archive/7/7f/20180202192106%21Emblem_of_the_Ministry_of_Internal_Affairs.svg/85px-Emblem_of_the_Ministry_of_Internal_Affairs.svg.png">
+    <title>Practice</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="inputsStyle.css">
+    <link rel="stylesheet" href="popup.css">
+    <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="popup.js" defer></script>
+    <script src="disablebtn.js" defer></script>
+    <script src="card.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" defer></script>
+
+    <!-- <script src="DB.js"></script> -->
+
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <div class="box1">
+            <nav class="navbar">
+                <div class="container">
+                    <a class="navbar-brand">
+                        <img class="logoimg" src="/image/Russia_MFA_emblem.png">
+
+                        <div class="navbar-wrap">
+                            <label class="LogoText">Название</label>  
+                            <ul class="navbar-menu">
+                                <li><a class="popup-btn" href="#">Добавить</a></li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="box2">
+
+            <main>
+                <form class="cont-form">
+    
+                    <h2 class="form-title">Форма поиска</h2>
+    
+                    <div>   
+                        <div class="number-fond">
+                            <label>Номер фонда: </label><input id="number-fond" onpaste="return false;" value="30"  type="number">
+                        </div>
+
+                        <div class="number-opis">
+                            <label>Номер описи: </label><input id="number-opis" onpaste="return false;" value="1"  min="1" maxlength="3" max="999" onKeyPress="if(this.value.length === 3) return false" type="number">
+                        </div>
+
+                        <div class="number-dela">
+                            <label>Номер дела: </label><input id="number-dela" min="1" max="999" value="1" onKeyPress="if(this.value.length === 3) return false" type="number">
+                        </div>
+
+                        <div class="number-delaS">
+                            <label>Номер дела (старый): </label><input id="number-delaS" type="number"> 
+                        </div>
+
+                        <div class="last-name">
+                            <label>Фамилия: </label><input id="last-name" onpaste="return false;" onKeyPress="if(this.value.length === 50) return false" class="namess" type="text">
+                        </div>
+
+                        <div class="first-name">
+                            <label>Имя: </label><input id="first-name" onpaste="return false;" onKeyPress="if(this.value.length === 50) return false" class="namess" type="text">
+                        </div>
+
+                        <div class="midle-name">
+                            <label>Отчество: </label><input id="midle-name" type="text" onpaste="return false;" onKeyPress="if(this.value.length === 50) return false" class="namess">
+                        </div>
+
+                        <div class="date-of-birthday">
+                            <label>День рождения: </label><input id="date-of-birthday" type="number" min="1" maxlength="2" max="31" maxvalue="31" onKeyPress="if(this.value.length === 2) return false">
+                        </div>
+
+                        <div class="month-of-birthday">
+                            <label>Месяц рождения: </label><input id="month-of-birthday" type="number" min="1" maxlength="2" max="12" onKeyPress="if(this.value.length === 2) return false">
+                        </div>
+
+                        <div class="year-of-birthday">
+                            <label>Год рождения: </label><input id="year-of-birthday" type="number" min="1" maxlength="4" max="9999" onKeyPress="if(this.value.length === 4) return false">
+                        </div>
+
+                        <div class="place-of-birthday">
+                            <label>Место рождения: </label><input maxlength="150" id="place-of-birthday" type="text">
+                        </div>
+
+                        <div class="number-of-sheets">
+                            <label>Количество листов: </label><input min="1" id="number-of-sheets" type="number">
+                        </div>
+                        <div class="employee-category">
+                            <label>Категория сотрудника: </label><input id="employee-category" type="text" list="defaultNumbers">
+                            <datalist id="defaultNumbers">
+                                <option value="1"></option>
+                                <option value="2"></option>
+                                <option value="3"></option>
+                                <option value="4"></option>
+                                <option value="5"></option>
+                                <option value="6"></option>
+                                <option value="7"></option>
+                                <option value="8"></option>
+                                <option value="9"></option>
+                                <option value="10"></option>
+                                <option value="11"></option>
+                                <option value="12"></option>
+                                <option value="13"></option>
+                                <option value="14"></option>
+                                <option value="15"></option>
+                                <option value="16"></option>
+                                <option value="17"></option>
+                                <option value="18"></option>
+                                <option value="19"></option>
+                                <option value="20"></option>
+                            </datalist>
+                        </div>
+                        
+                        <div class="note">
+                            <label>Примечание: </label><input maxlength="150" id="note" type="text">
+                        </div>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit" class="Button" id="search-btn">Поиск</button>
+                    </div>
+    
+                </form>
+            </main>
+
+        </div>
+
+        <div class="box3">
+
+                    <div class="ogrmaxw">
+
+                    </div>
+
+        </div>
+    </div>
+
+    <div href="index.html" id="persona">
+        <div class="okno" id="okno">
+
+            <div class="wrapper2">
+                <div class="box11">
+                    <img class="person-image" src="#">
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-wrap">
+        <div class="popup-box">
+            <form>
+                <div>   
+                        <div class="number-fond">
+                            <label class="zvezda">*</label><label>Номер фонда: </label><input id="number-fondR" required onpaste="return false;" value="30"  type="number">
+                        </div>
+
+                        <div class="number-opis">
+                            <label class="zvezda">*</label><label>Номер описи: </label><input value="1" id="number-opisR" required onpaste="return false;"  min="1" maxlength="3" max="999" onKeyPress="if(this.value.length === 3) return false" type="number">
+                        </div>
+    
+                        <div class="number-dela">
+                            <label class="zvezda">*</label><label>Номер дела: </label><input value="1" id="number-delaR" required min="1" max="999" onKeyPress="if(this.value.length === 3) return false" type="number">
+                        </div>
+    
+                        <div class="number-delaS">
+                        <label>Номер дела (старый): </label><input id="number-delaSR" type="number"> 
+                    </div>
+    
+                    <div class="last-name">
+                        <label class="zvezda">*</label><label>Фамилия: </label><input id="last-nameR" required onpaste="return false;" onKeyPress="if(this.value.length === 50) return false" class="namess" type="text">
+                    </div>
+    
+                    <div class="first-name">
+                        <label class="zvezda">*</label><label>Имя: </label><input id="first-nameR" required onpaste="return false;" onKeyPress="if(this.value.length === 50) return false" class="namess" type="text">
+                    </div>
+    
+                    <div class="midle-name">
+                        <label>Отчество: </label><input id="midle-nameR" type="text" onpaste="return false;" onKeyPress="if(this.value.length === 50) return false" class="namess">
+                    </div>
+    
+                    <div class="date-of-birthday">
+                        <label>День рождения: </label><input id="date-of-birthdayR" type="number" min="1" maxlength="2" max="31" onKeyPress="if(this.value.length === 2) return false">
+                    </div>
+    
+                    <div class="month-of-birthday">
+                        <label>Месяц рождения: </label><input id="month-of-birthdayR" type="number" min="1" maxlength="2" max="12" onKeyPress="if(this.value.length === 2) return false">
+                    </div>
+    
+                    <div class="year-of-birthday">
+                        <label>Год рождения: </label><input id="year-of-birthdayR" type="number" min="1" maxlength="4" max="9999" onKeyPress="if(this.value.length === 4) return false">
+                    </div> 
+    
+                    <div class="place-of-birthday">
+                        <label class="zvezda">*</label><label>Место рождения: </label><input required id="place-of-birthdayR" required type="text">
+                    </div>
+    
+                    <div class="number-of-sheets">
+                        <label class="zvezda">*</label><label>Количество листов: </label><input min="1" id="number-of-sheetsR" required type="number">
+                    </div>
+                    <div class="employee-category">
+                        <label class="zvezda">*</label><label>Категория сотрудника: </label><input id="employee-categoryR" required type="text" list="defaultNumbers">
+                        <datalist id="defaultNumbers">
+                            <option value="1"></option>
+                            <option value="2"></option>
+                            <option value="3"></option>
+                            <option value="4"></option>
+                            <option value="5"></option>
+                            </datalist>
+                    </div>
+                    <div class="note">
+                        <label>Примечание: </label>
+                        <textarea  maxlength="150" id="noteR" type="text"></textarea>                
+                    </div>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="Button-add" id="submit-add">Добавить</button>
+                </div>
+                <a href="index.html" class="popup-close"></a>
+            </form>
+            </div>
+        </div>
+
+    <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+    <script src="addtodb.js"></script>
+
+    <script>
+    document.querySelector('body').onclick = function(e){
+        if(e.target.className != 'deleate') return
+        let peroductdel = e.target.closest('.product')
+        peroductdel.remove()
+    }
+    </script>
+    
+
+
+</body>
+</html>
